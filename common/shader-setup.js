@@ -11,6 +11,19 @@ export function getExternalVertexShader(gl, shaderType, path) {
     return shader;
 }
 
+export function getShader(gl, shaderType, shaderSource) {
+    var shader = gl.createShader(shaderType);
+    gl.shaderSource(shader, shaderSource);
+    gl.compileShader(shader);
+
+    if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+        alert(gl.getShaderInfoLog(shader));
+        return null;
+    }
+
+    return shader;
+}
+
 function getShaderSource(url) {
     var request = new XMLHttpRequest();
     request.open("GET", url, false);

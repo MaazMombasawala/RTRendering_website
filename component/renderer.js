@@ -1,12 +1,15 @@
-import { getExternalVertexShader } from "../common/shader-setup.js";
+import { getExternalVertexShader,getShader } from "../common/shader-setup.js";
 
 export var renderers = {};
 
 export class Renderer {
-    constructor(gl, vertexShaderPath, fragmentShaderPath, initializer, draw) {
+    constructor(gl, vertexShaderSource, fragmentShaderSource, initializer, draw) {
         var shaderProgram = gl.createProgram();
-        var vertexShader = getExternalVertexShader(gl, gl.VERTEX_SHADER, vertexShaderPath);
-        var fragmentShader = getExternalVertexShader(gl, gl.FRAGMENT_SHADER, fragmentShaderPath);
+        var vertexShader = getShader(gl, gl.VERTEX_SHADER, vertexShaderSource);
+        // var vertexShader = getExternalVertexShader(gl, gl.VERTEX_SHADER, vertexShaderPath);
+        // var fragmentShader = getExternalVertexShader(gl, gl.FRAGMENT_SHADER, fragmentShaderPath);
+        var fragmentShader = getShader(gl, gl.FRAGMENT_SHADER, fragmentShaderSource);
+
 
         gl.attachShader(shaderProgram, vertexShader);
         gl.attachShader(shaderProgram, fragmentShader);
