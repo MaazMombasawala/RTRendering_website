@@ -1,0 +1,17 @@
+- [DONE] Test if hosting and imports can work with modules
+- [DONE] Import previous pipeline into a modular ECS framework
+- [DONE] Do texture mapping on a surface
+- [DONE] Display and texture map onto a parametric surface - allow switch between lighting, rendering and u,v mode
+- [DONE] Do environment Cube mapping
+- [DONE] Add free camera movement
+- [DONE] Do animation of model
+- [DONE] local and global rotation
+- Make hierarchical object from existing stuff
+- Update Readme
+- Add procedural texture (Perlin Noise) and bump mapping
+
+- Extras 
+- [DONE] See if classes can be exported directly
+- [DONE] Remove js extensions from imports -- This can't be done, fixed imports
+- [NAH] Replace XMLHttpRequest with Fetch API
+- See if drawing animation loop can be done with webWorkers
