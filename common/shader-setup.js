@@ -18,6 +18,7 @@ export function getShader(gl, shaderType, shaderSource) {
 
     if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
         alert(gl.getShaderInfoLog(shader));
+        console.log("Failed for shader " + shaderSource)
         return null;
     }
 
